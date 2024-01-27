@@ -1,15 +1,4 @@
 #!/usr/bin/env bash
 
-if [ $# -eq 0 ]; then
-    echo "Usage: $0 <file>"
-    echo "where <file> is a file containing natural numbers to factor."
-    exit 1
-fi
-
-while read -r number; do
-    echo "Processing number: $number"
-    factors=$(factor "$number")
-    echo "Factors: $factors"
-    
-    echo "$number=$factors"
-done < "$1"
+gcc factors.c -o a
+./a $1
