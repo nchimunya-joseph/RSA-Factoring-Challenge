@@ -14,6 +14,7 @@ while read -r number || [ -n "$number" ]; do
 			factor1=$divisor
 			factor2=$((number / divisor))
 			echo "$number=$factor1*$factor2"
+			break
 		fi
 		divisor=$((divisor + 1))
 	done
